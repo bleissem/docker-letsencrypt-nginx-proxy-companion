@@ -1,4 +1,4 @@
-FROM golang:1.10-alpine AS go-builder
+FROM golang:1.11-alpine AS go-builder
 
 ENV DOCKER_GEN_VERSION=0.7.4
 
@@ -28,6 +28,7 @@ ENV DEBUG=false \
 RUN apk add --update \
         bash \
         ca-certificates \
+        coreutils \
         curl \
         jq \
         openssl \
